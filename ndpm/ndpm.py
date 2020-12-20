@@ -92,7 +92,7 @@ class Ndpm(nn.Module):
                     torch.zeros((), dtype=torch.int64), destination)
                 destination = destination.to(self.device)
             to_stm = destination == 0  # [B]
-            self.stm_x.extend(torch.unbind(x[to_stm].cpu()))
+            self.stm_x.extend(torch.unbind(x[to_stm].cpu()))#to_stm:whether to put data to short-term memory
             self.stm_y.extend(torch.unbind(y[to_stm].cpu()))
             self.stm_next_erase -= 1
             if self.stm_next_erase == 0 and self.config['stm_erase_period'] > 0:

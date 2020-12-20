@@ -4,7 +4,7 @@
 
 data_root: './data'
 batch_size: 10
-num_workers: 16
+num_workers: 4
 sleep_batch_size: 50
 sleep_num_workers: 4
 eval_batch_size: 256
@@ -46,11 +46,11 @@ classifier_chill: 0.01
 #########
 
 log_alpha: -400
-stm_capacity: 500
+stm_capacity: 2
 stm_erase_period: 0
-sleep_step_g: 8000
-sleep_step_d: 2000
-sleep_summary_step: 500
+sleep_step_g: 2
+sleep_step_d: 2
+sleep_summary_step: 2
 sleep_val_size: 0
 update_min_usage: 0.1
 

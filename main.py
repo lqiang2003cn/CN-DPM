@@ -53,9 +53,9 @@ def main():
 
     # Set log directory
     config['log_dir'] = args.log_dir
-    if os.path.exists(args.log_dir):
-        print('WARNING: %s already exists' % args.log_dir)
-        input('Press enter to continue')
+    # if os.path.exists(args.log_dir):
+    #     print('WARNING: %s already exists' % args.log_dir)
+    #     input('Press enter to continue')
 
     # Save config
     os.makedirs(config['log_dir'], mode=0o755, exist_ok=True)
